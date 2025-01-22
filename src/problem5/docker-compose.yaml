@@ -1,0 +1,17 @@
+volumes:
+  db:
+
+services:
+  db:
+    image: new-postgres:latest
+    build:
+      context: ./postgres
+      dockerfile: Dockerfile
+    ports:
+      - 5432:5432
+    volumes:
+      - db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: postgres
+      POSTGRES_USER: user
