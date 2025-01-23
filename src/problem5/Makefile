@@ -3,5 +3,5 @@ up:
 
 down:
 	docker compose down --remove-orphans
-	docker image prune -a
+	docker image prune -f
 	docker volume rm $$(docker volume ls -q)
