@@ -1,6 +1,8 @@
 ## Requirements:
+To run the application, your OS needs to install these requirements:
 - Node.js version 20, npm package
-- docker, docker compose, make
+- docker, docker compose
+- make package
 
 ## Installation:
 - make up
@@ -12,6 +14,8 @@
 ## Endpoints
 
 ### 1. Create a Resource
+
+**Command**: `curl -X POST http://localhost:8080/api/resources/ -H 'Content-Type: application/json' -d '{"name": "<enter name here>"}'`
 
 **Method:**  `POST`
 
@@ -45,6 +49,8 @@
 
 ### 2. List resources with basic filters
 
+**Command**: `curl -X GET 'http://localhost:8080/api/resources?name=<enter keyword here>'`
+
 **Method:**  `GET`
 
 **Endpoint:**  `/api/resources?name=`
@@ -72,6 +78,8 @@
 ```
 
 ### 3. Get details of a resource
+
+**Command**: `curl -X GET http://localhost:8080/api/resources/<enter id of resource here>`
 
 **Method:**  `GET`
 
@@ -105,6 +113,8 @@
 
 ### 4. Update Resource
 
+**Command**: `curl -X PUT http://localhost:8080/api/resources/<enter id of resource here> -H 'Content-Type: application/json' -d '{"name": "<enter the updated name here>"}'`
+
 **Method:**  `PUT`
 
 **Endpoint:**  `/api/resources/{id}`
@@ -133,6 +143,8 @@
 ```
 
 ### 5. Delete Resource
+
+**Command**: `curl -X DELETE http://localhost:8080/api/resources/<enter id of resource here>`
 
 **Method:**  `DELETE`
 
