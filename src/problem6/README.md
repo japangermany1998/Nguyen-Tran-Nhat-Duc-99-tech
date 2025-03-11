@@ -209,5 +209,5 @@ The `Scoreboard API Module` is a backend application responsible for managing an
 | user_id      | TEXT      | Foreign key refer to user table  |
 | created_at   | DATETIME  | Timestamp of this round          |
 | score        | INTEGER   | Score of this round              |
-- If user calls an API action without assigning questions before, return error, else check if the action is user answering the questions.
+- If user calls an API action without assigning questions before, return error, else check the action to verify whether the user is answering the questions.
 
